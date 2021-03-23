@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cadastro de Livro - Livraria</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/livraria_icon.png" width="52" height="32" />
+
+            <h4 class="fw-bold d-inline-block">Livraria</h4>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarExpand"
+            aria-controls="navbarExpand"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarExpand">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Categorias</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Ficção Científica</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Entre</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cadastre-se</a>
+              </li>
+            </ul>
+
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Procure pelo título..."
+              />
+
+              <button class="btn btn-outline-dark" type="submit">
+                Procurar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container mt-4">
+        <h4 class="fw-bold mb-3">Cadastro de Livro</h4>
+
+        <form class="row g-3">
+          <div class="col-12">
+            <label for="inputTitulo" class="form-label">Título</label>
+            <input
+              type="text"
+              class="form-control is-invalid"
+              id="inputTitulo"
+            />
+            <div class="invalid-feedback">O campo é obrigatório</div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="inputISBN10" class="form-label">ISBN 10</label>
+            <input type="text" class="form-control" id="inputISBN10" />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="inputISBN13" class="form-label">ISBN 13</label>
+            <input type="text" class="form-control" id="inputISBN13" />
+          </div>
+
+          <div class="col-12">
+            <label for="inputSinopse" class="form-label">Sinopse</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="inputSinopse"
+            ></textarea>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="selectCategorias" class="form-label">Categorias</label>
+            <select class="form-select">
+              <option selected>Ficção Científica</option>
+              <option value="1">Fantasia</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="selectAutor" class="form-label">Autor</label>
+            <select class="form-select">
+              <option selected>George Orwell</option>
+            </select>
+          </div>
+
+          <button
+            class="btn btn-outline-dark mt-4 mb-4 w-75 mx-auto"
+            type="submit"
+          >
+            Cadastrar
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
